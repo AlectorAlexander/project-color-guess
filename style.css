@@ -1,0 +1,62 @@
+h1, h2 {
+    text-align: center;
+}
+#colors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#ans{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.ball {
+    margin: 2px;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    border: 1px solid black
+}
+
+/*Referência de animação da paleta de cores: https://codepen.io/rauldronca/pen/mARYEm*/
+
+
+.ball, h1 {
+    cursor: pointer;
+    position: relative;
+    background-color: #16a085;
+    color: #fff;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    box-shadow: 0 5px 15px #193047;
+  }
+  
+  .ball:hover {
+    background: #fff;
+    box-shadow: 0px 2px 10px 5px #1abc9c;
+    color: #000;
+  }
+  
+  .ball:after {
+    content: "";
+    background: #1abc9c;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+  
+  .ball:active:after, h1 {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  }
+  
+  .ball:focus, h1 { outline:0; }
+  
